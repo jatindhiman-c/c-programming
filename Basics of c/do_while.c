@@ -6,7 +6,7 @@ int main ()
 int n;
 int i;
 i=1;
-printf(" no of times you want to print");
+printf(" no of times you want to print - ");
 scanf("%d", &n);
 do{
     printf(" value of i is %d\n",i);
