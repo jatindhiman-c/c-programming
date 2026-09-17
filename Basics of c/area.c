@@ -1,6 +1,7 @@
 #include<stdio.h>
-int main(){
 
+
+ int main(){
 int l,b,area;
 
 printf("ENTER LENGTH - ");
