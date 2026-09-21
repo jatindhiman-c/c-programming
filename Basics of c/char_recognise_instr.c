@@ -8,7 +8,7 @@ char ch;
     printf("enter element which need to be recognised - ");
     scanf("%c", &ch);
 
-    for(i=0;i<14;i++){
+    for(i=0;i<=14;i++){
         // printf("ascii values of %c in str[%d] is %d\n",str[i],i,str[i]);
 if(str[i]==ch){
 there = 1;
