@@ -19,3 +19,11 @@ int main()
 return 0;
  }
 
+//if we do 
+// while(i=20)
+// { then it will run as an infinite loop because it will substitute value of i with 20 instead of condition 
+// ao we have to use while
+//while(i==20)
+ //code
+
+// }
