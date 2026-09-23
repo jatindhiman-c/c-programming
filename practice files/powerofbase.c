@@ -9,10 +9,10 @@ int main()
     scanf("%d", &b);
     printf("enter power - ");
     scanf("%d", &p);
-
+r = 1;
     for(i=1;i<=p;i++){
 
-    r = b*b;
+    r *= b;
     }
 
         printf("value of power of number is %d ",r);
