@@ -7,9 +7,10 @@ int main()
    
 
     for (i = 1; i<= 5; i++){
-    for(j=1;j<=5;j++){
+    for(j=1;j<=9;j++){
 
-if(i==3 || j==3)printf("*");
+if(i==1 || i==5)printf("*");
+else if(j==1 || j==9)printf("*");
 else printf(" ");
     }
 
