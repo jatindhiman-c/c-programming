@@ -3,7 +3,7 @@
 int main(){
 
     int x,y;
-    x=6;
+    x=8;
     y=7;
  if(x>y){
 
