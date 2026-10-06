@@ -1,0 +1,2 @@
+array is a set of data which can hold multiple values in it depending on its size 
+array adddress is allocated continuously to all boxes and its address is denoted by the faddress of first element of array

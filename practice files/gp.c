@@ -12,7 +12,7 @@ for(i=1;i<=10;i++){
 
 ap *= d ;
 printf("%d \t",ap);
-
+ 
 }
 return 0;
 
