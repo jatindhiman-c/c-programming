@@ -3,8 +3,8 @@
 
 int main(){
 int i;
-char string[4] = {'a','b','c','\0'};  // same as doing char string[] = "abc";
-
+// char string[4] = {'a','b','c','\0'};  // same as doing char string[] = "abc";
+char string[20] = {"hello world"};
 // for ( i = 0; i < 4; i++)
 // {
 //     printf(" %c", string[i]);
