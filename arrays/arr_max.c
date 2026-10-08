@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main(){
-float  arr[5] = { 1,6,4,8,7};
-int max = -1;
+float  arr[5] = { 67,6,4,8,7};
+int max = arr[0];
 for(int i=0;i<5;i++){
 
     if(arr[i] > max)
