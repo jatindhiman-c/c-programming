@@ -4,9 +4,9 @@
 #include <time.h>
 
 int main() {
-    srand(time(0));
+    srandom(time(0));
     
-    int num = rand() % 100 + 1;
+    int num = random() % 100 + 1;
     
     int guess;
     printf("GUESS A NUMBER BETWEEN 1 TO 100 - ");

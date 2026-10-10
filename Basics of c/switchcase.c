@@ -3,7 +3,7 @@
 int main ()
 {
   char alphabet;
-     printf("enter an alphabet between a to z - ", alphabet);
+     printf("enter an alphabet between a to z - ");
      scanf(" %c", &alphabet);
 
      switch(alphabet){
