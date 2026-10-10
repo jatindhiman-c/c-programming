@@ -12,9 +12,6 @@ do{
     printf(" value of i is %d\n",i);
     i++;
 }while (i<=n);
-{
-    /* code */
-}
 
 
 return 0;
