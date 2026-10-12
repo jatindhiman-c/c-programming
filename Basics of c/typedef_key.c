@@ -1,29 +1,16 @@
-#include <stdio.h>  
-#include <string.h>
-
- typedef struct student{
-    // this is used to give nick name or we can say creating an alias for our struct
-    int age;
-    float marks;
-    char name[50];
-    
-    
-} data;
+#include <stdio.h>
 
 
-void printfinfo(data s1){
-
-
-    printf("%s\n%d\n%f\n", s1.name,s1.age,s1.marks );
- // dont use return 0; with void
-}
+typedef int number; 
 
 int main(){
 
- data rai[50];
+number ok = 5;         //! typedef makes a alias for a data type in this code   int has been given name as number so now i can use it as int x;  or number x;
+printf("number is %d", ok);
 
-data s1 = {16, 9.2, "jatin"};
-printfinfo(s1);
+
+
 
 return 0;
+
 }
