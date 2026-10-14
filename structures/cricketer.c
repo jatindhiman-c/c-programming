@@ -21,5 +21,7 @@ cr p[5] = {
     for(int i =0 ; i<5;i++){
 printf(" %s \n %d \n %d \n %.2f \n", p[i].name, p[i].age, p[i].matches, p[i].avgr );
     }
+p[1].age==p[0].age?
+    printf("age of both players is equal "): printf("not equal age");
     return 0;
 }
