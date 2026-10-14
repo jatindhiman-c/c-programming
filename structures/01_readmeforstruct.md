@@ -1,3 +1,7 @@
 struct is used when we want to hold different datatypes under one name 
 
-if we want to store same data type under one name then arrays are used 
+[if we want to store same data type under one name then arrays are used]  
+
+WE CAN CHECK OR EQUATE TWO STRUCTURES OR SPECIFIC MEMBERS OF IT DIRECTLY BY A=B;  OR SPECIFICLY BY A[1].AGE==A[2].AGE;
+
+WE CAN DO NESTING IN STRUCT ALSO
