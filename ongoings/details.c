@@ -11,14 +11,17 @@ typedef struct details{
  char status[10];
 }details;
 
+details acc;
+
 int main(){
     int x;
+    char inname[22];
      char apin[6];
     char accno[12];
      char inapin[6];
     char inaccno[12];
-    int blc = 0;
-    char count[3];
+    float blc = 0;
+   
     int y;
      bool fp = false;
     bool fan = false;
@@ -34,12 +37,13 @@ case 1:{
       
    
      redirect:
+     
     printf(" ENTER MOBILE NUMBER AS YOUR ACCOUNT NUMBER  - ");
-scanf("%s",inaccno);
+scanf("  %s",inaccno);
 FILE* ptr = fopen("accpin","r");
 
 printf("ENTER PIN OF 4 DIGITS  - ");
-scanf("%s",inapin);
+scanf("  %s",inapin);
 
 
 
@@ -62,24 +66,28 @@ fclose(ptr);
 case 2 :
     {
    
-    printf(" ENTER MOBILE NUMBER AS YOUR ACCOUNT NUMBER  - ");
-scanf("%s",accno);
+    acc.balance = 1000;
 FILE* ptr = fopen("accpin","a");
 FILE* dls = fopen("details","a");
-count;
 
-printf("%d",count);
+printf(" ENTER MOBILE NUMBER AS YOUR ACCOUNT NUMBER  - ");
+scanf("%s",accno);
 
-fprintf(ptr,"%s\n",accno);
 printf("CREATE PIN OF 4 DIGITS  - ");
 scanf("%s",apin);
 
+fprintf(ptr,"%s\n",accno);
 fprintf(ptr,"%s\n",apin);
-
+printf("ENTER YOUR NAME - ");
+scanf("%s",inname);
 
 fprintf(dls,"%s\n",accno);
+fprintf(dls,"%s\n",inname);
 fprintf(dls,"%s\n",apin);
-fprintf(dls,"%d\n",blc);
+
+fprintf(dls,"%lf\n",acc.balance);
+strcpy(acc.status,"active");
+fprintf(dls,"%lf\n",acc.status);
 
 
 fclose(ptr);
@@ -97,18 +105,43 @@ break;
 if(fp==true && fan==true) {printf("AUTHENTICATION SUCCEEDED\n");
 
 
-int x2;
+int h;
 printf("SELECT THE INDEX\n");
     printf(" 1) ACCOUNT DETAILS \n 2) DEPOSITE MONEY \n 3) WITHDRAW MONEY \n 4) TRANSFER MONEY \n 5) CLOSE ACCOUNT\n ");
-scanf("%d",&x2);
+scanf("%d",&h);
 
 
 
-switch(x2){
-case  1:{
-   
-   
+switch(h){
+case  1:
+{
+    char caccno[22];
+    FILE* dls = fopen("details","r");
+if(dls==NULL) printf("ERROR OCCURED");
+while(fgets(caccno,22,dls)!=NULL){
+    if(strstr(caccno,inaccno)!=NULL){
+        strcpy(acc.accno,inaccno);
+        break;
+    }
 }
+if(fgets(acc.name,22,dls)==NULL);
+
+if(fgets(acc.apin,22,dls)==NULL);
+
+
+
+;
+
+if(fgets(acc.status,22,dls)==NULL);
+     
+   
+  printf("%s\n",acc.accno);
+printf("%s",acc.name);
+printf("%s",acc.apin);
+printf("%lf\n",acc.balance);
+printf("%s\n",acc.status);
+
+
 
 
  
@@ -127,6 +160,10 @@ case  1:{
 
 
 }}
+
+
+
 else printf("AUTHENTICATION FAILED\n");
+
     return  0;
 }
