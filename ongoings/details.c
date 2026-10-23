@@ -5,8 +5,10 @@
 
 typedef struct details{
  char accno[12];
+ char name[22];
  char apin[6];
  double balance;
+ char status[10];
 }details;
 
 int main(){
@@ -67,8 +69,7 @@ FILE* dls = fopen("details","a");
 count;
 
 printf("%d",count);
-fprintf(dls,"%d\n",count);
-fprintf(ptr,"%d\n",count);
+
 fprintf(ptr,"%s\n",accno);
 printf("CREATE PIN OF 4 DIGITS  - ");
 scanf("%s",apin);
@@ -93,8 +94,8 @@ break;
 
 
 
-if(fp==true && fan==true) {printf("AUTHENTICATION SUCCEEDED\n");}
-else printf("AUTHENTICATION FAILED\n");
+if(fp==true && fan==true) {printf("AUTHENTICATION SUCCEEDED\n");
+
 
 int x2;
 printf("SELECT THE INDEX\n");
@@ -105,9 +106,9 @@ scanf("%d",&x2);
 
 switch(x2){
 case  1:{
-
-    details acc [100];
-
+   
+   
+}
 
 
  
@@ -125,7 +126,7 @@ case  1:{
 
 
 
-}
-
+}}
+else printf("AUTHENTICATION FAILED\n");
     return  0;
 }
