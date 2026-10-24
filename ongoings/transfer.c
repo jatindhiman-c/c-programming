@@ -18,7 +18,7 @@ details rec,r;
 
 
 int main(){
-   
+ 
     int x;
     char inname[22];
      char apin[6];
@@ -167,14 +167,33 @@ printf("CURRENT BALANCE IS %lf",acc.balance);
 
 case 4:{
    
-char ctr[12];
 
-FILE* dls = fopen("details","r");
+
+
+ printf("ENTER ACCOUNT NUMBER OF RECIEVER - ");
+    scanf(" %s",rec.accno);
+    printf("ENTER AMOUNT TO BE TRANSFERED - ");
+    double tr;
+    scanf("%lf",&tr);
+
+    acc.balance -= tr;
+    rec.balance += tr;
+        break;
+    }
+
+
+
+
+
+}
+char ctr[12];
+FILE* dls = NULL;
+ fopen("details","r");
 if(dls==NULL) printf("ERROR OCCURED");
 while(fgets(ctr,22,dls)!=NULL){
     if(strstr(ctr,rec.accno)!=NULL){
-        strcpy(rec.accno,ctr);
-
+        strcpy(rec.accno,ctr);}
+    }
         if(fgets(rec.name,22,dls)==NULL){return 1;}
 if(fgets(rec.apin,22,dls)==NULL){return 1;}
 if(fgets(balc,22,dls)==NULL){return 1;}
@@ -186,36 +205,7 @@ if(dls == NULL || tmp == NULL){
 while(fscanf(dls,"%s %s %s %lf %s",r.accno,r.name,r.apin,r.balance,r.status)==6);
 if(strcmp(r.accno,acc.accno)!= 0 && strcmp(r.accno,acc.accno)!= 0){
     fprintf(tmp,"%s\n%s\n%s\n%lf\n%s",r.accno,r.name,r.apin,r.balance,r.status);
-}}
- printf("ENTER ACCOUNT NUMBER OF RECIEVER - ");
-    scanf(" %s",rec.accno);
-    printf("ENTER AMOUNT TO BE TRANSFERED - ");
-    double tr;
-    scanf("%lf",&tr);
-
-    acc.balance -= tr;
-    rec.balance += tr;
-        break;
-    }}
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-}}
+}}}
 
 
 
