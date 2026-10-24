@@ -9,11 +9,13 @@ typedef struct details{
  char apin[6];
  double balance;
  char status[10];
+ char traccno[12];
 }details;
 
 details acc;
 
 int main(){
+    
     int x;
     char inname[22];
      char apin[6];
@@ -66,7 +68,7 @@ fclose(ptr);
 case 2 :
     {
    
-    acc.balance = 1000;
+    
 FILE* ptr = fopen("accpin","a");
 FILE* dls = fopen("details","a");
 
@@ -85,9 +87,9 @@ fprintf(dls,"%s\n",accno);
 fprintf(dls,"%s\n",inname);
 fprintf(dls,"%s\n",apin);
 
-fprintf(dls,"%lf\n",acc.balance);
+fprintf(dls,"%lf\n",acc.balance = 1000);
 strcpy(acc.status,"active");
-fprintf(dls,"%lf\n",acc.status);
+fprintf(dls,"%s\n",acc.status);
 
 
 fclose(ptr);
@@ -110,12 +112,8 @@ printf("SELECT THE INDEX\n");
     printf(" 1) ACCOUNT DETAILS \n 2) DEPOSITE MONEY \n 3) WITHDRAW MONEY \n 4) TRANSFER MONEY \n 5) CLOSE ACCOUNT\n ");
 scanf("%d",&h);
 
-
-
-switch(h){
-case  1:
-{
     char caccno[22];
+    char balc[12];
     FILE* dls = fopen("details","r");
 if(dls==NULL) printf("ERROR OCCURED");
 while(fgets(caccno,22,dls)!=NULL){
@@ -124,36 +122,47 @@ while(fgets(caccno,22,dls)!=NULL){
         break;
     }
 }
-if(fgets(acc.name,22,dls)==NULL);
 
-if(fgets(acc.apin,22,dls)==NULL);
+if(fgets(acc.name,22,dls)==NULL){return 1;}
+if(fgets(acc.apin,22,dls)==NULL){return 1;}
+if(fgets(balc,22,dls)==NULL){return 1;}
+{sscanf(balc,"%lf",&acc.balance);}
+if(fgets(acc.status,10,dls)==NULL){return 1;}   
 
+switch(h){
+case  1:
+{
 
-
-;
-
-if(fgets(acc.status,22,dls)==NULL);
-     
-   
   printf("%s\n",acc.accno);
 printf("%s",acc.name);
 printf("%s",acc.apin);
 printf("%lf\n",acc.balance);
-printf("%s\n",acc.status);
+printf("%s",acc.status);
+ break;
+}
 
+case 2:{
+printf("ENTER AMMOUNT TO BE DEPOSITED - ");
+double dip;
+scanf("%lf",&dip);
 
+acc.balance += dip;
+printf("AMOUNT DEPOSITED\n");
+printf("CURRENT BALANCE IS %lf\n",acc.balance);
+break;
+}
 
-
- 
-
+case 3:{
+printf("ENTER AMOUNT TO BE WITHDRAWN - ");
+double with;
+scanf("%lf",with);
+acc.balance -= with;
+printf("AMOUNT WITHDRAWN \n");
+printf("CURRENT BALANCE IS %lf",acc.balance);
     break;
 }
 
-
-
-
-
-
+case 4:
 
 
 

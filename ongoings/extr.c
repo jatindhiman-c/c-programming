@@ -22,3 +22,13 @@ fprintf(dls,"%s\n",apin);
 fprintf(dls,"%f\n",accounts[totalacc].balance);
 strcpy(accounts[totalacc].status,"active");
 fprintf(dls,"%s\n",accounts[totalacc].status);
+
+
+
+
+
+
+
+
+
+if(fgets(acc.status,22,dls)==NULL);
