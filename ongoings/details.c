@@ -9,7 +9,7 @@ typedef struct details{
  char apin[6];
  double balance;
  char status[10];
- char traccno[12];
+
 }details;
 
 details acc;
