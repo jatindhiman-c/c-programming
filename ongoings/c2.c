@@ -211,8 +211,18 @@ if(strcmp(r.accno,acc.accno)!= 0 && strcmp(r.accno,acc.accno)!= 0){
     fprintf(tmp,"%s\n%s\n%s\n%lf\n%s",r.accno,r.name,r.apin,r.balance,r.status);
 }}
 
-fprintf(tmp,"%s\n%s\n%s\n%lf\n%s",rec.accno,rec.name,rec.apin,rec.balance,rec.status);
-fprintf(tmp,"%s\n%s\n%s\n%lf\n%s",acc.accno,acc.name,acc.apin,acc.balance,acc.status);
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 }
